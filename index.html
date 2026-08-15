@@ -155,20 +155,18 @@
         }
 
         .preloader-logo {
-            width: 140px;
+            /* Free image – height fixed, width auto to preserve aspect */
             height: 140px;
-            /* SQUARE – no border-radius */
-            border-radius: 0;
+            width: auto;
             animation: pulse 1.2s ease-in-out infinite;
             margin-bottom: 1rem;
-            overflow: hidden;
+            overflow: visible; /* no cropping */
             box-shadow: 0 0 40px rgba(212, 175, 55, 0.35);
-            background: #161310;
+            background: transparent;
         }
         .preloader-logo img {
-            width: 100%;
             height: 100%;
-            object-fit: contain;
+            width: auto;
             display: block;
         }
 
@@ -291,19 +289,16 @@
             gap: 0.8rem;
         }
         .logo-img {
-            width: 50px;
             height: 50px;
-            /* SQUARE – no border-radius */
-            border-radius: 0;
-            overflow: hidden;
+            width: auto;
+            overflow: visible;
             transition: transform 0.3s ease;
             flex-shrink: 0;
-            background: #161310;
+            background: transparent;
         }
         .logo-img img {
-            width: 100%;
             height: 100%;
-            object-fit: contain;
+            width: auto;
             display: block;
         }
         .logo-container:hover .logo-img {
@@ -465,20 +460,18 @@
         }
 
         .hero-logo {
-            width: 140px;
-            height: 140px;
-            /* SQUARE – no border-radius */
-            border-radius: 0;
+            /* Free image – no fixed shape */
+            max-width: 140px;
+            height: auto;
+            width: auto;
             margin: 0 auto 1.5rem;
             animation: float 4s ease-in-out infinite;
-            overflow: hidden;
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.30);
-            background: #161310;
+            overflow: visible;
+            background: transparent;
         }
         .hero-logo img {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: auto;
             display: block;
         }
 
@@ -786,19 +779,18 @@
             text-align: center;
         }
         .footer-logo {
-            width: 70px;
+            /* Free image */
             height: 70px;
-            /* SQUARE – no border-radius */
-            border-radius: 0;
+            width: auto;
             margin: 0 auto 1rem;
-            overflow: hidden;
-            background: #161310;
+            overflow: visible;
+            background: transparent;
         }
         .footer-logo img {
-            width: 100%;
             height: 100%;
-            object-fit: contain;
+            width: auto;
             display: block;
+            margin: 0 auto;
         }
         .footer-name {
             font-family: var(--font-heading);
@@ -922,11 +914,9 @@
 
         @media (max-width: 480px) {
             .hero-logo {
-                width: 110px;
-                height: 110px;
+                max-width: 110px;
             }
             .preloader-logo {
-                width: 110px;
                 height: 110px;
             }
             .section-padding {
@@ -1056,7 +1046,6 @@
             </div>
 
             <div class="services-grid">
-                <!-- Row 1 -->
                 <div class="service-card scroll-animate" style="transition-delay:0.02s;">
                     <div class="service-icon">💄</div>
                     <h3>Professional Makeup</h3>
