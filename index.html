@@ -155,18 +155,19 @@
         }
 
         .preloader-logo {
-            /* Free image – height fixed, width auto to preserve aspect */
-            height: 140px;
+            /* Same as hero-logo – natural proportion, no fixed shape */
+            max-width: 160px;
             width: auto;
+            height: auto;
             animation: pulse 1.2s ease-in-out infinite;
             margin-bottom: 1rem;
-            overflow: visible; /* no cropping */
+            overflow: visible;
             box-shadow: 0 0 40px rgba(212, 175, 55, 0.35);
             background: transparent;
         }
         .preloader-logo img {
-            height: 100%;
-            width: auto;
+            width: 100%;
+            height: auto;
             display: block;
         }
 
@@ -460,7 +461,6 @@
         }
 
         .hero-logo {
-            /* Free image – no fixed shape */
             max-width: 140px;
             height: auto;
             width: auto;
@@ -779,7 +779,6 @@
             text-align: center;
         }
         .footer-logo {
-            /* Free image */
             height: 70px;
             width: auto;
             margin: 0 auto 1rem;
@@ -917,7 +916,7 @@
                 max-width: 110px;
             }
             .preloader-logo {
-                height: 110px;
+                max-width: 120px;
             }
             .section-padding {
                 padding: 3rem 0;
